@@ -1,84 +1,222 @@
-LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。
+# plainwhite
 
-这是一个可以发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。
+Simplistic jekyll portfolio-style theme for writers.
 
-现在我将此文档和基础教程分开了，此文档用于说明LOFFER的现有功能和更新情况，**查看为无任何代码基础者写的教程[请点这里](https://fromendworld.github.io/LOFFER/document/)**
+**Demo**: [samarsault.com](https://samarsault.com)
 
-## 更新内容
+![plainwhite theme preview](/screenshot.png)
 
-### 2019-07-25 V0.4.0
+## Installation on Github Pages
 
-修订目录跳级会坏掉的问题，不算完美解决，但不会坏掉了。
+Add this line to your site's `_config.yml`:
 
-增加对LaTeX渲染的支持，请见[这篇说明和示例](https://fromendworld.github.io/LOFFER/math-test/)。
+```yaml
+remote_theme: samarsault/plainwhite-jekyll
+```
 
-增加置顶功能，只要在一个post的YAML Front Matter（就是文章头部的这段信息）中加入` pinned: true `，这篇文章就可以置顶了。
+## Installation
 
-另外介绍一个给LOFFER更换主题颜色的手法。LOFFER用了一个开源的颜色表[Open Color](https://yeun.github.io/open-color/),该色表提供的可选颜色有：red, pink, grape, violet, indigo, blue, cyan, teal, green, lime, yellow。
+Add this line to your Jekyll site's `Gemfile`:
 
-LOFFER的默认状态是teal，要更换主题颜色，只要打开文件` _sass/_variables.scss `，将文件中所有的teal全部替换成你想要的颜色。例如，查找teal，替换indigo，全部替换，commit，完成！
+```ruby
+gem "plainwhite"
+```
 
+And add this line to your Jekyll site's `_config.yml`:
 
-### 2019-07-20 V0.3.0
+```yaml
+theme: plainwhite
+```
 
-新版本增加目录功能，在post的信息中心加入` toc: true `，这篇博文就会显示目录了。
+And then execute:
 
-这次没有对config的修改，因此应该可以通过[这个方法](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser)，给自己提pull request来更新。
+    $ bundle
 
-目录基于[jekyll-toc by allejo](https://github.com/allejo/jekyll-toc)制作。
+Or install it yourself as:
 
-目前我试用发现了一点小问题：如果你的标题级数不按套路变化，它就会搞不懂…… 
+    $ gem install plainwhite
 
-` # 一级标题 `下面必须是` ## 二级标题 `，如果是` ### 三级标题 `它就人工智障了【手动扶额】
+## Usage
 
-注意：目前目录仅在桌面版显示。
+The "plainwhite" key in \_config.yml is used to customize the theme data.
 
+```yaml
+plainwhite:
+  name: Adam Denisov
+  tagline: Developer. Designer
+  date_format: "%b %-d, %Y"
 
-### 2019-06-30 V0.2.0
+  social_links:
+    twitter: samarsault
+    github: samarsault
+    linkedIn: in/samarsault # format: locale/username
+```
 
-新版本进一步优化了一下样式，并且支持了基于GitHub Issues的评论Gitalk（请看下文的配置说明）。
+**Updating Placeholder Image**
 
-如果你已经fork了LOFFER，想要更新到新版本的话，可以试试[这个方法](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser)，或者你也可以干脆删掉重来，只要保留自己的大部分config设定和所有的post就好。
+The placeholder portfolio image can be replaced by the desired image by placing it as `assets/portfolio.png` in your jekyll website, or by changing the following line in `_config.yaml`
 
-LOFFER只是容器，你的posts才是博客的核心。
+```yaml
+plainwhite:
+  portfolio_image:  "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
+```
 
-## 支持的功能
+To use a different image for dark mode, e.g. with different colors that work better in dark mode, add a `portfolio_image_dark` entry in addition to the `portfolio_image`.
 
-使用Markdown文档在_post文件夹中发布博文，现有功能包括显示作者、置顶博文、添加目录。
+```yaml
+plainwhite:
+  portfolio_image:      "assets/portfolio.png"
+  portfolio_image_dark: "assets/portfolio_dark.png"
+```
 
-博文YAML举例：
+**Comments (Disqus)**
 
-    ---
-    layout: post
-    title: Markdown语法简介
-    date: 2013-07-16
-    Author: Shengbin 
-    tags: [sample, markdown]
-    comments: true
-    toc: true
-    ---
+Comments on posts can be enabled by specifying your disqus_shortname under plainwhite in `_config.yml`. For example,
 
-按照标签和日期查看博文归档。请查看/tags 和/archive 页面。
+```yaml
+plainwhite:
+  disqus_shortname: games
+```
 
-链接博客主的社交媒体。请在_config.yml中填写。
+**Google Analytics**
 
-支持Disqus和Gitalk两种评论区。请在_config.yml中设置。
+It can be enabled by specifying your analytics id under plainwhite in `_config.yml`
 
+```yaml
+plainwhite:
+  analytics_id: "< YOUR ID >"
+```
 
-## 致谢
+**Sitemap**
 
-* [Jekyll](https://github.com/jekyll/jekyll) - 这是本站存在的根基
-* [Kiko-now](<https://github.com/aweekj/kiko-now>) - 我首先是fork这个主题，然后再其上进行修改汉化，才有了LOFFER
-* [Font Awesome](<https://fontawesome.com/>) - 社交网络图标来自FontAwesome的免费开源内容
+It can be toggled by the following line to under plainwhite in `_config.yml`
 
+```yaml
+plainwhite:
+  sitemap: true
+```
 
+**Excerpts**
 
-## 帮助这个项目
+Excerpts can be enabled by adding the following line to your `_config.yml`
 
-介绍更多人来使用它，摆脱lofter自由飞翔！
+```yaml
+show_excerpts: true
+```
 
-欢迎Issues和Pull Requests。
+**Layouts**
 
-给我点一个☆吧！
+- Home
+- Page
+- Post
 
-![img](https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/givemefive.png)
+**Navigation**
+
+Navigation can be enabled by adding the following line to your `_config.yml`
+
+```yaml
+plainwhite:
+  navigation:
+    - title: My Work
+      url: "/my-work"
+    - title: Resume
+      url: "/resume"
+```
+
+**Mobile**
+
+By default, Plainwhite places the sidebar (logo, name, tagline etc.) above the content on mobile (narrow screens).
+To condense it (moving some things to the bottom of the page and making the rest smaller) so it takes up less space, add the following to your `_config.yml`:
+
+```yaml
+plainwhite:
+  condensed_mobile:
+    - home
+    - post
+    - page
+```
+
+This chooses which layouts (types of page) should be condensed on mobile screens. E.g. if you want everything but the landing page to be condensed, remove `home` from the list. This option does not affect rendering on wider screens.
+
+**Dark mode**
+
+Dark mode can be enabled by setting the `dark_mode` flag in your `_config.yml`
+
+The website will check the OS preferred color scheme and set the theme accordingly, the preference will then be saved in a cookie
+
+```yaml
+plainwhite:
+  dark_mode: true
+```
+
+![plainwhite dark theme previe](/dark.png)
+
+**Multiline tagline**
+
+Tagline can be multiline in this way
+
+```yaml
+plainwhite:
+  tagline: |
+  First Line. 
+
+  Second Line. 
+
+  Third Line.
+```
+
+**Search-bar**
+
+Search-bar can be enabled by adding the following line to `config.yml`
+
+```yaml
+plainwhite:
+  search: true
+```
+
+Search is powered by [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) Jekyll plugin. A `search.json` containing post meta and contents will be generated in site root folder. Plugin JavaScript will then match for posts based on user input. More info and `search.json` customization documentation can be found in plugin repository.
+
+**Base URL**
+
+You can specify a custom base URL (eg. example.com/blog/) by adding the following line to `_config.yaml`. Note that there is no trailing slash on the URL.
+
+```yaml
+baseurl: "/blog"
+```
+
+**Language**
+
+You can set the `lang` attribute of the `<html>` tag on your pages by changing the following line in `_config.yml`:
+
+```yaml
+plainwhite:
+  html_lang: "en"
+```
+
+[See here for a full list of available language codes](https://www.w3schools.com/tags/ref_country_codes.asp)
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/samarsault/plainwhite-jekyll. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Development
+
+To set up your environment to develop this theme, run `bundle install`.
+
+Your theme is setup just like a normal Jekyll site! To test your theme, run `bundle exec jekyll serve` and open your browser at `http://localhost:4000`. This starts a Jekyll server using your theme. Add pages, documents, data, etc. like normal to test your theme's contents. As you make modifications to your theme and to your content, your site will regenerate and you should see the changes in the browser after a refresh, just like normal.
+
+When your theme is released, only the files in `_layouts`, `_includes`, `_sass` and `assets` tracked with Git will be bundled.
+To add a custom directory to your theme-gem, please edit the regexp in `plainwhite.gemspec` accordingly.
+
+## Donation
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/thelehhman)
+
+## License
+
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## More themes
+
+- [Texture](https://github.com/samarsault/texture)
