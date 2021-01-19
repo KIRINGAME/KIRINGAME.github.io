@@ -19,7 +19,7 @@ remote_theme: samarsault/plainwhite-jekyll
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "plainwhite"
+gem "minima"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
