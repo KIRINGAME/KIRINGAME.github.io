@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "每天学数学"
-date:   2021-2-18
+date:   2020-2-18
 categories: game 
 ---
 ![math icon](http://humpback.me/game/math/math-icon.png)  每天学数学（math every day）  
