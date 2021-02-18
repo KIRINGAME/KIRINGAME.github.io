@@ -1,5 +1,5 @@
 ---
-layout: game
+layout: post
 title:  "每天学数学"
 date:   2021-2-18
 categories: game 

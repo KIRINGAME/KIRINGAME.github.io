@@ -1,5 +1,5 @@
 ---
-layout: game
+layout: post
 title:  "math every day"
 date:   2021-2-18
 categories: game 
