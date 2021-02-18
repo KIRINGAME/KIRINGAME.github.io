@@ -4,8 +4,8 @@ title:  "每天学数学"
 date:   2020-2-18
 categories: game 
 ---
+********
 ![math icon](http://humpback.me/game/math/math-icon.png)  每天学数学（math every day）  
----
 * 每天20道数学加减法，手写数字，让宝宝熟练掌握5以内，10以内，20以内加减法，连加连减，有加有减。  
 * 养成良好的学习习惯，从幼儿做起。  
 * 选择题目，让宝宝自主书写数字，计数20道，完成今日学习任务，从现在开始吧！  
