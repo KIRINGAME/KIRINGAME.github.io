@@ -1,8 +1,8 @@
 ---
-layout: post
 title:  "BrainTrainingLine"
-date:   2020-2-17
-categories: game 
+date:   2020-02-17 15:04:23
+categories: [HumpBack]
+tags: [game]
 ---
 ********
 ![word icon](http://humpback.me/game/braintrainingline/icon.png)  Brain Training: Line

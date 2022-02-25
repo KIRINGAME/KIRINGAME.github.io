@@ -1,8 +1,8 @@
 ---
-layout: post
 title:  "WordBrainTraining"
-date:   2020-2-17
-categories: game 
+date:   2020-02-17 15:04:23
+categories: [HumpBack]
+tags: [HumpBack]
 ---
 ********
 ![word icon](http://humpback.me/game/wordbraintraining/icon.png)  Word Brain Training  
