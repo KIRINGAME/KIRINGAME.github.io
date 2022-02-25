@@ -2,7 +2,7 @@
 title:  "math every day"
 date:   2020-02-08 15:04:23
 categories: [HumpBack]
-tags: [game]
+tags: [App]
 ---
 ********
 ![math icon](http://humpback.me/game/math/math-icon.png)  math every day   

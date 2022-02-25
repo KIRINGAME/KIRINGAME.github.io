@@ -2,7 +2,7 @@
 title:  "WordBrainTraining"
 date:   2020-02-17 15:04:23
 categories: [HumpBack]
-tags: [HumpBack]
+tags: [App]
 ---
 ********
 ![word icon](http://humpback.me/game/wordbraintraining/icon.png)  Word Brain Training  

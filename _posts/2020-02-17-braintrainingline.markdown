@@ -2,7 +2,7 @@
 title:  "BrainTrainingLine"
 date:   2020-02-17 15:04:23
 categories: [HumpBack]
-tags: [game]
+tags: [App]
 ---
 ********
 ![word icon](http://humpback.me/game/braintrainingline/icon.png)  Brain Training: Line
