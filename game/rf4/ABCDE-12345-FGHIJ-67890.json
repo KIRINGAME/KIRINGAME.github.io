@@ -1,5 +1,5 @@
 {
   "Code": "ABCDE-12345-FGHIJ-67890",
-  "ServerStatus": true,
-  "ExpiryDate": "2025-06-12T23:59:59"
+  "ServerStatus": false,
+  "ExpiryDate": "2025-06-30T23:59:59"
 }
