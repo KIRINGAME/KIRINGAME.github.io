@@ -2,6 +2,6 @@
   "Code": "ABCDE-12345-FGHIJ-67890",
   "IsUsed": false,
   "MachineId": "",
-  "ExpiryDate": "2025-06-31T23:59:59",
+  "ExpiryDate": "2025-06-30T23:59:59",
   "Permissions": ["FullAccess", "PremiumFeatures"]
 }
